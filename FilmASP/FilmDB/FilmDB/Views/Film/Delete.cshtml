@@ -1,0 +1,63 @@
+﻿@model FilmDB.Models.FilmTable
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<br />
+<h3>Are you sure you want to delete this?</h3>
+
+<hr />
+
+<div>
+    @using (Html.BeginForm())
+    {
+        <h5>Movie</h5>
+
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Release_Date)
+
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Release_Date)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Genre)
+
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Genre)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Rating)
+
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Rating)
+            </dd>
+
+
+        </dl>
+
+        <div class="col-md-24">
+            <input type="submit" value="Delete" class="btn btn-default" />
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

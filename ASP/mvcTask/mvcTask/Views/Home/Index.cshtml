@@ -1,0 +1,24 @@
+﻿@using mvcTask.Models
+@model IEnumerable<Album>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2> My Album Library</h2>
+<u1>
+    @foreach(Album r in Model)
+    {
+        <li>@r.title</li>
+        <li>@r.artist</li>
+        <li>@r.format</li>
+        <li>@r.price</li>
+        <br />
+        <hr />
+        
+    }
+    @*Comment*@
+
+</u1>
+
+
